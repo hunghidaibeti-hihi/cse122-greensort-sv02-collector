@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenSort - Danh Sách Nhiệm Vụ Thu Gom (Collector Task List)</title>
+
+  <!-- Google Fonts & Bootstrap 5.3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- HEADER -->
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <div class="container py-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="collector-task-list.html" class="d-flex align-items-center text-decoration-none navbar-brand-greensort">
+          <span class="fs-3 me-2">🌱</span>
+          <span class="fw-bold">Green<span class="text-success">Sort</span></span>
+          <span class="badge bg-warning-subtle text-dark ms-2">Thu gom viên</span>
+        </a>
+
+        <nav class="d-none d-lg-flex align-items-center gap-4">
+          <a href="resident-waste-guide.html" class="nav-link text-secondary">Về trang Người dân</a>
+          <a href="collector-task-list.html" class="nav-link active-green">Nhiệm vụ hôm nay</a>
+          <a href="coordinator-request-board.html" class="nav-link text-secondary">Bảng điều phối</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+          <div class="dropdown">
+            <button class="btn btn-outline-warning text-dark btn-sm dropdown-toggle rounded-pill px-3" type="button" data-bs-toggle="dropdown">
+              <i class="bi bi-truck me-1"></i>Xe: <strong>Anh Nam (Xe 02)</strong>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item active" href="collector-task-list.html">🚛 Thu gom viên: Task List</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="resident-waste-guide.html">🌿 Người dân: Phân loại rác</a></li>
+              <li><a class="dropdown-item" href="resident-collection-points.html">🌿 Người dân: Điểm thu gom</a></li>
+              <li><a class="dropdown-item" href="resident-pickup-request.html">🌿 Người dân: Đặt lịch thu gom</a></li>
+              <li><a class="dropdown-item" href="coordinator-request-board.html">📋 Điều phối viên: Request Board</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-grow-1 p-3 p-md-4">
+    <div class="container" style="max-width: 900px;">
+      
+      <!-- Lộ trình trong ngày -->
+      <div class="card p-4 border-0 shadow-sm rounded-4 bg-white mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h1 class="h4 fw-bold text-dark mb-0">Nhiệm Vụ Thu Gom Của Tuyến Xe 02</h1>
+            <small class="text-muted">Khu vực: Quận Đống Đa • Tuyến đường tối ưu bởi GreenSort AI</small>
+          </div>
+          <span class="badge bg-success-subtle text-success rounded-pill px-3 py-2">Tiến độ: 1/3 điểm</span>
+        </div>
+
+        <div class="progress mb-2" style="height: 8px;">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 33%"></div>
+        </div>
+        <small class="text-muted">Đã tải: 180kg / 500kg dung tích xe</small>
+      </div>
+
+      <!-- Danh sách nhiệm vụ từng điểm dừng -->
+      <h2 class="h5 fw-bold text-dark mb-3">Các Điểm Thu Gom Cần Ghé (Theo Thứ Tự Tuyến AI)</h2>
+      
+      <div class="d-flex flex-column gap-3" id="collectorTasks">
+        
+        <!-- Điểm 1: Đang thực hiện -->
+        <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-warning bg-white">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <span class="badge bg-warning text-dark rounded-pill mb-1">Điểm dừng 1 • Đang tới</span>
+              <h3 class="h6 fw-bold mb-0">175 Tây Sơn, Đống Đa (Ký túc xá TLU)</h3>
+            </div>
+            <span class="badge bg-danger rounded-pill">Ưu tiên P1</span>
+          </div>
+          <p class="small text-muted mb-2">Thu gom: <strong>1 thùng pin cũ & 4 bóng đèn huỳnh quang</strong></p>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+            <a href="tel:0912345678" class="btn btn-sm btn-outline-secondary rounded-pill px-3">
+              <i class="bi bi-telephone me-1"></i>Gọi người gửi
+            </a>
+            <button class="btn btn-sm btn-success rounded-pill px-3" onclick="this.textContent='Đã hoàn thành'; this.className='btn btn-sm btn-secondary rounded-pill px-3 disabled'; alert('Đã chụp ảnh xác nhận và cập nhật trạng thái thu gom thành công!');">
+              <i class="bi bi-camera me-1"></i>Chụp ảnh & Xác nhận lấy hàng
+            </button>
+          </div>
+        </div>
+
+        <!-- Điểm 2: Chờ thu gom -->
+        <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <span class="badge bg-secondary rounded-pill mb-1">Điểm dừng 2 • Tiếp theo</span>
+              <h3 class="h6 fw-bold mb-0">45 Chùa Bộc, Đống Đa</h3>
+            </div>
+            <span class="badge bg-primary rounded-pill">Ưu tiên P2</span>
+          </div>
+          <p class="small text-muted mb-2">Thu gom: <strong>1 tủ gỗ ép 2 cánh (Cồng kềnh)</strong></p>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+            <a href="tel:0987654321" class="btn btn-sm btn-outline-secondary rounded-pill px-3">
+              <i class="bi bi-telephone me-1"></i>Gọi người gửi
+            </a>
+            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="alert('Đang mở bản đồ điều hướng tới 45 Chùa Bộc...')">
+              <i class="bi bi-geo-alt me-1"></i>Chỉ đường
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-3 text-center small text-white-50 mt-auto">
+    GreenSort Thu Gom Viên • Ứng dụng Vận hành Hiện trường • Học phần CSE122
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
