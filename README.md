@@ -12,7 +12,7 @@
 - `js/`: Thư mục JavaScript xử lý DOM & LocalStorage.
 
 ## 3 Link nộp bài của SV2:
-1. **Link Figma:** [Figma Link](https://www.figma.com/)
-2. **Link GitHub cá nhân:** [GitHub Repo SV2]([https://github.com/](https://github.com/hunghidaibeti-hihi))
-3. **Link Video OBS 3 phút:** [Video OBS](https://youtube.com/)
+1. **Link Figma:** [Figma Link](https://www.figma.com/design/n5rfJtPNwhQhga23ZF7XzT/Untitled?node-id=2-506&t=coksvCiFmvhVWxMB-0)
+2. **Link GitHub cá nhân:** [GitHub Repo SV2](https://github.com/hunghidaibeti-hihi)
+3. **Link Video OBS 3 phút:** [Video OBS](https://youtu.be/kSk3UIenzqg)
 - Tên video: `CSE122-GK-SV02-[Nguyễn Xuân Hùng]-CollectorTaskList`
