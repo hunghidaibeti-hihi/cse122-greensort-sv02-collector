@@ -1,7 +1,7 @@
 # BÁO CÁO GIỮA KỲ CSE122 – SINH VIÊN 2 (SV2)
 
-- **Họ và tên:** [Họ tên SV2]
-- **Mã sinh viên:** [Mã SV2]
+- **Họ và tên:** Nguyễn Xuân Hùng
+- **Mã sinh viên:** 2551060620
 - **Vai trò BTL:** Nhân viên thu gom (Collector)
 - **Trang chính thực hiện:** `collector-task-list.html` (Nhiệm Vụ Thu Gom & Lộ Trình Hiện Trường)
 
